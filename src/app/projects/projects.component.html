@@ -1,0 +1,23 @@
+<div class="projects">
+  <h1> PROJECTS</h1>
+  <div class="project-list">
+      <div class="project" *ngFor="let project of projects">
+          <h3>{{ project.name }}</h3>
+          <div class="image-container">
+              <img *ngIf="project.image" [src]="project.image" alt="{{ project.name }}" />
+          </div>
+          <!-- روابط المشروع -->
+          <div>
+              <div class="project-links"> <!-- إضافة حاوية لربط العناصر -->
+                  <a [href]="project.link1" target="_blank">
+                      <i class="fa-solid fa-arrow-up-right-from-square fa-xl"></i>
+                  </a>
+                  <a [href]="project.link2" target="_blank">
+                      <i class="fa-solid fa-code fa-xl"></i>
+                  </a>
+              </div>
+              <p class="btn- ">{{ project.number }} months ago</p>
+          </div>
+      </div>
+  </div>
+</div>
